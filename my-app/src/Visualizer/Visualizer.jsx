@@ -24,10 +24,12 @@ export class Visualizer extends React.Component {
         this.setState({array});
     }
 
-    bubbleSort() {
-        const jsSortedArray = this.state.array.slice().sort();
-        const bubbleSortedArray = Algorithms.bubbleSort(this.state.array);
-        equalArrays(jsSortedArray, bubbleSortedArray);
+
+    mergeSort() {
+        const jsSortedArray = this.state.array.slice().sort((a,b) => a - b);
+        const mergeSortedArray = Algorithms.mergeSort(this.state.array);
+        console.log(mergeSortedArray);
+        console.log(equalArrays(jsSortedArray, mergeSortedArray));
     }
 
     render() {
@@ -41,6 +43,7 @@ export class Visualizer extends React.Component {
                 )}
                 <button onClick={() => this.resetArray()}>Generate New Array</button>
                 <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
+                <button onClick={() => this.mergeSort()}>Merge Sort</button>
 
             </div>
         );
