@@ -31,7 +31,7 @@ export class Visualizer extends React.Component {
         console.log(mergeSortedArray);
         console.log(equalArrays(jsSortedArray, mergeSortedArray));
     }
-
+    // tests if the sorting algorithm works
     testSortAlgorithm() {
         for (let i = 0; i < 100; i++) {
             const array = [];
